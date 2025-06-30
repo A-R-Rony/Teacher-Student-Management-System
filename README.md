@@ -5,6 +5,21 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 # Deployed at Netlify 
 [Live site link](https://resilient-jelly-31a8bf.netlify.app/)
 
+## Deploy process:
+Angular deploy at netlify:
+
+1) Build the project: ```` ng build````
+2) create ``netlify.toml`` in ```dist/STManagement/browser```
+3) set the code for ```netlify.toml``` as:
+   ```[[redirects]]
+   from = "/*"
+   to = "/index.html"
+   status = 200
+
+4) open netlify and select deploy manually
+5) drag and drop files at ```dist/STManagement/browser```
+6) click on deploy.
+
 ## Development server
 
 To start a local development server, run:
