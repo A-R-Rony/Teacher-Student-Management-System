@@ -2,6 +2,9 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
 
+# Deployed at Netlify 
+[Live site link](resilient-jelly-31a8bf.netlify.app)
+
 ## Development server
 
 To start a local development server, run:
