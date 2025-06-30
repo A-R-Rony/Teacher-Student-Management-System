@@ -1,0 +1,30 @@
+<div class="text-center">
+  <h1 class="mt-2"> Teacher and Student Management System</h1>
+</div>
+<div class="container mt-5">
+  <h2>SignUp</h2>
+  <form [formGroup]="signupForm">
+   <div class="mb-3">
+     <label > Email: </label>
+     <input type="email" class="form-control" formControlName="email">
+     @if (signupForm.get('email')?.touched || signupForm.get('email')?.invalid) {
+       <div class="text-danger">
+           <small>Enter a valid email address.</small>
+       </div>
+     }
+   </div>
+    <div class="mb-3">
+      <label >Password: </label>
+      <input type="password" class="form-control" formControlName="password">
+      @if (signupForm.get('password')?.touched && signupForm.get('password')?.invalid) {
+        <div class="text-danger">
+          <small>Password is required.</small>
+        </div>
+      }
+    </div>
+    <div class="d-flex gap-2">
+    <button class="btn btn-success" type="submit" (click)="onSubmit()">SignUp</button>
+      <a [routerLink]="['/login']" class="btn btn-primary">Login</a>
+    </div>
+  </form>
+</div>

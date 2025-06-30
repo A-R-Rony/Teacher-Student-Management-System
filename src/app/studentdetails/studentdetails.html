@@ -1,0 +1,35 @@
+<div class="d-flex justify-content-center mt-5">
+  <div class="card shadow rounded-4 w-100" style="max-width: 600px;">
+    <div class="card-header bg-success text-white text-center rounded-top-4">
+      <h5 class="mb-0">Student Information</h5>
+    </div>
+    <div class="card-body">
+      @if (!studentDetails) {
+        <div class="alert alert-danger text-center">
+          Student with id : {{ studentId }} is not found!
+        </div>
+      } @else {
+        <div class="mb-3 row">
+          <label class="col-sm-4"><strong>Name: </strong></label>
+          <div class="col-sm-8">{{ studentDetails?.studentName }}</div>
+        </div>
+
+        <div class="mb-3 row">
+          <label class="col-sm-4"><strong>Email: </strong></label>
+          <div class="col-sm-8">{{ studentDetails?.studentEmail }}</div>
+        </div>
+
+        <div class="mb-3 row">
+          <label class="col-sm-4"><strong>Roll: </strong></label>
+          <div class="col-sm-8">{{ studentDetails?.studentRoll }}</div>
+        </div>
+
+        <div class="mb-3 row">
+          <label class="col-sm-4"><strong>Student ID: </strong></label>
+          <div class="col-sm-8">{{ studentDetails?.studentId }}</div>
+        </div>
+      }
+
+    </div>
+  </div>
+</div>

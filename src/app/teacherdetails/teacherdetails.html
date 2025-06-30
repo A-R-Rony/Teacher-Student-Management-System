@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center mt-5">
+  <div class="card shadow rounded-4 w-100" style="max-width: 600px;">
+    <div class="card-header bg-success text-white text-center rounded-top-4">
+      <h5 class="mb-0">Teacher Details</h5>
+    </div>
+    <div class="card-body">
+      @if (!teacherDetails) {
+        <div class="alert alert-danger text-center">
+          Teacher with id : {{ teacherId }} is not found!
+        </div>
+      } @else {
+        <div class="mb-3 row">
+          <label class="col-sm-4"><strong>Name: </strong></label>
+          <div class="col-sm-8">{{ teacherDetails?.teacherName }}</div>
+        </div>
+
+        <div class="mb-3 row">
+          <label class="col-sm-4"><strong>Email: </strong></label>
+          <div class="col-sm-8">{{ teacherDetails?.teacherEmail }}</div>
+        </div>
+
+        <div class="mb-3 row">
+          <label class="col-sm-4"><strong>Subject: </strong></label>
+          <div class="col-sm-8">{{ teacherDetails?.teacherSubject }}</div>
+        </div>
+
+        <div class="mb-3 row">
+          <label class="col-sm-4"><strong>Teacher ID: </strong></label>
+          <div class="col-sm-8">{{ teacherDetails?.teacherId }}</div>
+        </div>
+      }
+
+      <ng-template #notFound>
+        <div class="alert alert-danger text-center">
+          Teacher details not found.
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>
