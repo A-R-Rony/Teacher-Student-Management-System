@@ -5,10 +5,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto"> <!-- Right aligned -->
         <li class="nav-item me-2">
-          <a class="btn btn-outline-light" [routerLink]="['/login']">Login</a>
+          <button class="btn btn-outline-light" (click)="login()">Login</button>
         </li>
         <li class="nav-item">
-          <a class="btn btn-light text-dark" [routerLink]="['/signup']">Signup</a>
+          <button class="btn btn-light text-dark" (click)="signup()">Signup</button>
         </li>
       </ul>
     </div>
@@ -18,4 +18,3 @@
 <div class="d-flex justify-content-center align-items-center vh-100">
   <h1>Hello, Welcome to the Teacher and Student Management System</h1>
 </div>
-

@@ -1,4 +1,4 @@
-@if(ShowNavbarFunction()){
+@if (showNavbar$ | async) {
   <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" [routerLink]="['/welcome']">Teacher & Student Management</a>
@@ -13,9 +13,10 @@
             <a class="nav-link" [routerLink]="['/student']">Student</a>
           </li>
         </ul>
+        <!-- Right side: logout -->
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link text-danger" [routerLink]="['/login']">Logout</a>
+            <a class="btn btn-danger" (click)="logout()">Logout</a>
           </li>
         </ul>
       </div>
